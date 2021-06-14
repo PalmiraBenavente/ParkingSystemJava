@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_xbig">35sp</dimen>
+    <dimen name="button_text_size_big">25sp</dimen>
+    <dimen name="button_main_margin_top_big">40dp</dimen>
+    <dimen name="button_main_margin_horizontal_xbig">50dp</dimen>
+</resources>

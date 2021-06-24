@@ -6,8 +6,8 @@ public class ParkingModel implements ParkingContract.MainActivityModel {
     private int parkingSpace;
 
     @Override
-    public void setParkingSpace() {
-        this.parkingSpace = 6;
+    public void setParkingSpace(int parkingSpace) {
+        this.parkingSpace = parkingSpace;
     }
 
     @Override

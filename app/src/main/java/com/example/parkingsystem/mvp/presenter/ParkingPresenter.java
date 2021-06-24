@@ -13,7 +13,12 @@ public class ParkingPresenter implements ParkingContract.MainActivityPresenter {
 
     @Override
     public void onSelectParkingButtonPressed() {
-        model.setParkingSpace();
-        view.showParkingSpacesAvailable(model.getParkingSpace());
+        view.showSelectionParkingSpaces(model.getParkingSpace());
+    }
+
+    @Override
+    public void onSetParkingButtonPressed(int spaces) {
+        model.setParkingSpace(spaces);
+        view.toastShowSpaces(model.getParkingSpace());
     }
 }

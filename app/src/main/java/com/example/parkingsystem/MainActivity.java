@@ -3,12 +3,13 @@ package com.example.parkingsystem;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.parkingsystem.databinding.ActivityMainBinding;
+import com.example.parkingsystem.listener.ListenerDialogFragment;
 import com.example.parkingsystem.mvp.contract.ParkingContract;
 import com.example.parkingsystem.mvp.model.ParkingModel;
 import com.example.parkingsystem.mvp.presenter.ParkingPresenter;
 import com.example.parkingsystem.mvp.view.ParkingView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ListenerDialogFragment {
     private ActivityMainBinding binding;
     private ParkingContract.MainActivityPresenter presenter;
 
@@ -23,5 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setListener() {
         this.binding.buttonMainSelectParking.setOnClickListener(view -> presenter.onSelectParkingButtonPressed());
+    }
+
+    @Override
+    public void setAmountParkingSpaces(int spaces) {
+        presenter.onSetParkingButtonPressed(spaces);
     }
 }

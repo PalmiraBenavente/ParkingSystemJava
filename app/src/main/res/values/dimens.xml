@@ -2,6 +2,7 @@
 <resources>
     <dimen name="text_size_xbig">35sp</dimen>
     <dimen name="text_size_normal">20sp</dimen>
+    <dimen name="text_size_big">25sp</dimen>
     <dimen name="edit_text_dialog_fragment_text_size_small">15sp</dimen>
     <dimen name="button_text_size_big">25sp</dimen>
     <dimen name="button_main_margin_top_big">40dp</dimen>
@@ -11,4 +12,8 @@
     <dimen name="width_dialog_fragment_size_xbig">300dp</dimen>
     <dimen name="height_dialog_fragment_size_xbig">200dp</dimen>
     <dimen name="margin_dialog_fragment_size_xbig">25dp</dimen>
+    <dimen name="button_main_margin_top_xbig">40dp</dimen>
+    <dimen name="reserver_parking_margin_horizontal_xbig">50dp</dimen>
+    <dimen name="reserver_parking_margin_top_big">40dp</dimen>
+    <dimen name="reserver_parking_layout_height_xbig">40dp</dimen>
 </resources>

@@ -28,5 +28,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_dialog_fragment_size_xbig"
-        android:text="@string/button_fragment_set_parking_ok" />
+        android:text="@string/text_button_dialog_fragment_ok" />
 </LinearLayout>

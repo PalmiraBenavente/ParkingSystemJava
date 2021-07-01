@@ -21,4 +21,9 @@ public class ParkingPresenter implements ParkingContract.MainActivityPresenter {
         model.setParkingSpace(spaces);
         view.toastShowSpaces(model.getParkingSpace());
     }
+
+    @Override
+    public void onBookParkingSpaces() {
+        view.showBookParkingPickers();
+    }
 }

@@ -7,7 +7,7 @@
     android:background="@drawable/wallpaper_main_background"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <TextView
         android:id="@+id/text_main_parking_title"
@@ -22,5 +22,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/button_main_margin_horizontal_xbig"
-        android:text="@string/button_main_activity_set_parking" />
+        android:text="@string/button_main_select_parking" />
+
+    <Button
+        android:id="@+id/button_main_book_parking_spaces"
+        style="@style/ButtonMainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/button_main_margin_horizontal_xbig"
+        android:text="@string/button_main_book_parking_spaces" />
 </LinearLayout>

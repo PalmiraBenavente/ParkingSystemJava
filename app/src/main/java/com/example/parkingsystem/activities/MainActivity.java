@@ -1,4 +1,4 @@
-package com.example.parkingsystem;
+package com.example.parkingsystem.activities;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements ListenerDialogFra
 
     private void setListener() {
         this.binding.buttonMainSelectParking.setOnClickListener(view -> presenter.onSelectParkingButtonPressed());
+        this.binding.buttonMainBookParkingSpaces.setOnClickListener(view -> presenter.onBookParkingSpaces());
     }
 
     @Override

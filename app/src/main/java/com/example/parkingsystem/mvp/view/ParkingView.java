@@ -2,11 +2,13 @@ package com.example.parkingsystem.mvp.view;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.widget.Toast;
 import androidx.fragment.app.FragmentManager;
 import com.example.parkingsystem.R;
-import com.example.parkingsystem.SpacesParkingDialogFragment;
+import com.example.parkingsystem.activities.ParkingReservationActivity;
 import com.example.parkingsystem.databinding.ActivityMainBinding;
+import com.example.parkingsystem.fragments.SpacesParkingDialogFragment;
 import com.example.parkingsystem.mvp.contract.ParkingContract;
 import com.example.parkingsystem.mvp.view.base.ActivityView;
 
@@ -29,5 +31,15 @@ public class ParkingView extends ActivityView implements ParkingContract.MainAct
         Context context = getContext();
         if (context != null)
             Toast.makeText(context, context.getString(R.string.toast_main_activity_select_space_parking, parkingSpace), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showBookParkingPickers() {
+        Context context = getContext();
+        Activity activity = getActivity();
+        if (context != null && activity != null) {
+            Intent intent = ParkingReservationActivity.newInstance(context);
+            activity.startActivity(intent);
+        }
     }
 }

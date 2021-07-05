@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_main_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_activity_reservation"
+        style="@style/TitleActivityReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_activity_parking_title" />
+
+    <Button
+        android:id="@+id/button_reserver_parking_picker_inic"
+        style="@style/ButtonMainStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/reserver_parking_margin_horizontal_xbig"
+        android:text="@string/text_button_reserver_parking_inic" />
+
+    <Button
+        android:id="@+id/button_reserver_parking_picker_end"
+        style="@style/ButtonMainStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/reserver_parking_margin_horizontal_xbig"
+        android:text="@string/text_button_reserver_parking_end" />
+
+    <EditText
+        android:id="@+id/edit_text_reserver_parking_place"
+        style="@style/EditTextReserverStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/reserver_parking_layout_height_xbig"
+        android:text="@string/text_edit_reserver_parking_place" />
+
+    <EditText
+        android:id="@+id/edit_text_reserver_parking_code"
+        style="@style/EditTextReserverStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/reserver_parking_layout_height_xbig"
+        android:text="@string/text_edit_reserver_parking_code" />
+
+    <Button
+        android:id="@+id/button_reserver_parking_save"
+        style="@style/ButtonReserverStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_reserver_parking_save" />
+</LinearLayout>

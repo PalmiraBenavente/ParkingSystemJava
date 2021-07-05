@@ -49,7 +49,7 @@
         <item name="android:textSize">@dimen/edit_text_dialog_fragment_text_size_small</item>
         <item name="android:textColorHint">@color/ming</item>
         <item name="android:textColor">@color/ming</item>
-        <item name="android:layout_marginTop">@dimen/reserver_parking_margin_top_big</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:background">@drawable/border</item>
         <item name="android:inputType">number</item>
         <item name="android:layout_marginStart">@dimen/reserver_parking_margin_horizontal_xbig</item>

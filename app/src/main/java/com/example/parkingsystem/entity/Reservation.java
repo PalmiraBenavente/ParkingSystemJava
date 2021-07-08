@@ -1,25 +1,24 @@
 package com.example.parkingsystem.entity;
 
 import com.example.parkingsystem.utils.Constants;
+import java.util.Calendar;
 
 public class Reservation {
-    private String startDate;
-    private String endDate;
+    private Calendar startDate;
+    private Calendar endDate;
     private int parkingLot;
     private int userCode;
 
     public Reservation() {
         this.parkingLot = Constants.INT_CERO;
         this.userCode = Constants.INT_CERO;
-        this.startDate = Constants.EMPTY_STRING;
-        this.endDate = Constants.EMPTY_STRING;
     }
 
-    public String getStartDate() {
+    public Calendar getStartDate() {
         return startDate;
     }
 
-    public String getEndDate() {
+    public Calendar getEndDate() {
         return endDate;
     }
 
@@ -31,11 +30,11 @@ public class Reservation {
         return userCode;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(Calendar startDate) {
         this.startDate = startDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDate(Calendar endDate) {
         this.endDate = endDate;
     }
 

@@ -1,6 +1,7 @@
 package com.example.parkingsystem.mvp.contract;
 
 import com.example.parkingsystem.entity.Reservation;
+import com.example.parkingsystem.utils.EnumReservationVerify;
 import java.util.Calendar;
 
 public interface ReservationParkingContract {
@@ -14,10 +15,11 @@ public interface ReservationParkingContract {
 
     interface ReservationActivityModel {
         void setReservationLotCode(int parkingLot, int parkingCode);
-        void setStartDate(String calendarDateTime);
-        void setEndDate(String calendarDateTime);
+        void setStartDate(Calendar calendarDateTime);
+        void setEndDate(Calendar calendarDateTime);
         void addReservation(Reservation reservation);
         Reservation getReservation();
+        EnumReservationVerify reservationVerify(Reservation reservation);
     }
 
     interface ReservationActivityView {
@@ -25,5 +27,10 @@ public interface ReservationParkingContract {
         String getParkingLot();
         String getParkingCode();
         void toastShowTextData(int lot, int code, String date1, String date2);
+        void toastShowOverlap();
+        void toastShowReserveOK();
+        void toastShowMissingCode();
+        void toastShowMissingLot();
+        void toastShowMissingDate();
     }
 }

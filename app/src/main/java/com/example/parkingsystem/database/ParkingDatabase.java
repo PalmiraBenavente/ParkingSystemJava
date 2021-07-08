@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ParkingDatabase {
     private static ParkingDatabase databaseSingleInstance = null;
-    HashMap<Integer, List<Reservation>> hashMapReservation = new HashMap<>();
+    private final HashMap<Integer, List<Reservation>> hashMapReservation = new HashMap<>();
 
     public ParkingDatabase() {
     }
@@ -19,13 +19,18 @@ public class ParkingDatabase {
         return databaseSingleInstance;
     }
 
+    public HashMap<Integer, List<Reservation>> getHashMapReservation() {
+        return hashMapReservation;
+    }
+
     public void addReservation(Reservation reservation) {
         List<Reservation> reserve = new ArrayList<>();
         int parkingLot = reservation.getParkingLot();
         if (hashMapReservation.containsKey(parkingLot)) {
-            reserve = hashMapReservation.get(parkingLot);
+            this.hashMapReservation.get(parkingLot).add(reservation);
+        } else {
+            reserve.add(reservation);
+            this.hashMapReservation.put(parkingLot, reserve);
         }
-        reserve.add(reservation);
-        hashMapReservation.put(parkingLot, reserve);
     }
 }

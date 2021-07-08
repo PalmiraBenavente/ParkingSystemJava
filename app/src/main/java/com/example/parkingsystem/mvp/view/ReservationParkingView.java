@@ -41,8 +41,41 @@ public class ReservationParkingView extends ActivityView implements ReservationP
     public void toastShowTextData(int lote, int code, String dateStart, String dateEnd) {
         Context context = getContext();
         Activity activity = getActivity();
-        if (context != null && activity != null)
+        if (context != null && activity != null) {
             Toast.makeText(context, context.getString(R.string.toast_resaervation_parking, lote, code, dateStart, dateEnd), Toast.LENGTH_SHORT).show();
             activity.onBackPressed();
+        }
+    }
+
+    @Override
+    public void toastShowOverlap() {
+        showToast(R.string.toast_reservation_overlap);
+    }
+
+    @Override
+    public void toastShowReserveOK() {
+        showToast(R.string.toast_reservation_ok);
+    }
+
+    @Override
+    public void toastShowMissingCode() {
+        showToast(R.string.toast_reservation_missing_code);
+    }
+
+    @Override
+    public void toastShowMissingLot() {
+        showToast(R.string.toast_reservation_overlap_missing_lot);
+    }
+
+    @Override
+    public void toastShowMissingDate() {
+        showToast(R.string.toast_reservation_missing_date);
+    }
+
+    private void showToast(int messageId) {
+        Activity activity = getActivity();
+        if (activity != null) {
+            Toast.makeText(activity, activity.getString(messageId), Toast.LENGTH_SHORT).show();
+        }
     }
 }

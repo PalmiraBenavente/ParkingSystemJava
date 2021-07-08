@@ -1,9 +1,9 @@
 package com.example.parkingsystem.mvp.presenter;
 
-import android.content.Context;
-import com.example.parkingsystem.utils.Constants;
 import com.example.parkingsystem.entity.Reservation;
 import com.example.parkingsystem.mvp.contract.ReservationParkingContract;
+import com.example.parkingsystem.utils.Constants;
+import com.example.parkingsystem.utils.EnumReservationVerify;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -30,15 +30,35 @@ public class ReservationParkingPresenter implements ReservationParkingContract.R
     public void onButtonPressedSaveReserver() {
         model.setReservationLotCode(this.getIntegerUserData(view.getParkingLot()), this.getIntegerUserData(view.getParkingCode()));
         Reservation reservation = model.getReservation();
-        model.addReservation(reservation);
-        view.toastShowTextData(reservation.getParkingLot(), reservation.getUserCode(), reservation.getStartDate(), reservation.getEndDate());
+        EnumReservationVerify check = model.reservationVerify(reservation);
+        switch (check) {
+            case MISSING_DATESTART:
+            case MISSING_DATEEND:
+                view.toastShowMissingDate();
+                break;
+            case MISSING_LOT:
+                view.toastShowMissingLot();
+                break;
+            case MISSING_CODE:
+                view.toastShowMissingCode();
+                break;
+            case COMPROBATION_OK:
+                view.toastShowReserveOK();
+                break;
+            case RESERVATION_OVERLAP:
+                view.toastShowOverlap();
+        }
+        if (check == EnumReservationVerify.COMPROBATION_OK) {
+            model.addReservation(reservation);
+            view.toastShowTextData(reservation.getParkingLot(), reservation.getUserCode(), this.getStringDate(reservation.getStartDate()), this.getStringDate(reservation.getEndDate()));
+        }
     }
 
     public void setReservation(Calendar calendarDateTime, boolean startDate) {
         if (startDate) {
-            model.setStartDate(this.getStringDate(calendarDateTime));
+            model.setStartDate(calendarDateTime);
         } else {
-            model.setEndDate(this.getStringDate(calendarDateTime));
+            model.setEndDate(calendarDateTime);
         }
     }
 

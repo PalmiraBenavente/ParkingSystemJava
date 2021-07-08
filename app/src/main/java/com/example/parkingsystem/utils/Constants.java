@@ -7,4 +7,5 @@ public class Constants {
     public static final int INT_ONE = 1;
     public static final String EMPTY_STRING = "";
     public static final String FORMAT_DATE ="hh: mm a dd-MMM-yyyy";
+    public static final int NOT_VALID = -1;
 }

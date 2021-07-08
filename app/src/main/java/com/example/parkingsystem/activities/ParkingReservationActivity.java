@@ -11,6 +11,7 @@ import com.example.parkingsystem.mvp.contract.ReservationParkingContract;
 import com.example.parkingsystem.mvp.model.ReservationParkingModel;
 import com.example.parkingsystem.mvp.presenter.ReservationParkingPresenter;
 import com.example.parkingsystem.mvp.view.ReservationParkingView;
+import com.example.parkingsystem.utils.ReservationChecker;
 import java.util.Calendar;
 
 public class ParkingReservationActivity extends AppCompatActivity implements ListenerDialogFragmentDate {
@@ -23,7 +24,7 @@ public class ParkingReservationActivity extends AppCompatActivity implements Lis
         super.onCreate(savedInstanceState);
         binding = ActivityReserverParkingLotBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        presenter = new ReservationParkingPresenter(new ReservationParkingView(this, binding), new ReservationParkingModel(ParkingDatabase.getInstance()));
+        presenter = new ReservationParkingPresenter(new ReservationParkingView(this, binding), new ReservationParkingModel(ParkingDatabase.getInstance(), new ReservationChecker(ParkingDatabase.getInstance())));
         this.setListener();
     }
 
@@ -41,5 +42,4 @@ public class ParkingReservationActivity extends AppCompatActivity implements Lis
     public void setDateTime(Calendar calendarDateTime, boolean startDate) {
         presenter.setReservation(calendarDateTime, startDate);
     }
-
 }

@@ -28,9 +28,7 @@ public class ParkingView extends ActivityView implements ParkingContract.MainAct
     }
 
     public void toastShowSpaces(int parkingSpace) {
-        Context context = getContext();
-        if (context != null)
-            Toast.makeText(context, context.getString(R.string.toast_main_activity_select_space_parking, parkingSpace), Toast.LENGTH_SHORT).show();
+        showToast(R.string.toast_main_activity_select_space_parking, parkingSpace);
     }
 
     @Override
@@ -40,6 +38,18 @@ public class ParkingView extends ActivityView implements ParkingContract.MainAct
         if (context != null && activity != null) {
             Intent intent = ParkingReservationActivity.newInstance(context);
             activity.startActivity(intent);
+        }
+    }
+
+    @Override
+    public void showToasRemovedReservation(int cantOldResevations) {
+        showToast(R.string.toas_main_removed_old_reservations, cantOldResevations);
+    }
+
+    private void showToast(int messageId, int messageInt) {
+        Activity activity = getActivity();
+        if (activity != null) {
+            Toast.makeText(activity, activity.getString(messageId, messageInt), Toast.LENGTH_SHORT).show();
         }
     }
 }

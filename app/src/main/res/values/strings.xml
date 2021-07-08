@@ -14,4 +14,5 @@
     <string name="text_button_reserver_parking_save">Save</string>
     <string name="fragment_date_picker_text_cancel">Cancele</string>
     <string name="fragment_date_picker_text_ok">ok</string>
+    <string name="toast_resaervation_parking">your lot number %1$d and your code is %2$d \n Start date:%3$s \n End date:%4$s</string>
 </resources>

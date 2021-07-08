@@ -33,14 +33,15 @@
         style="@style/EditTextReserverStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/reserver_parking_layout_height_xbig"
-        android:text="@string/text_edit_reserver_parking_place" />
+        android:layout_marginTop="@dimen/reserver_parking_margin_top_big"
+        android:hint="@string/text_edit_reserver_parking_place" />
 
     <EditText
         android:id="@+id/edit_text_reserver_parking_code"
         style="@style/EditTextReserverStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/reserver_parking_layout_height_xbig"
-        android:text="@string/text_edit_reserver_parking_code" />
+        android:hint="@string/text_edit_reserver_parking_code" />
 
     <Button
         android:id="@+id/button_reserver_parking_save"

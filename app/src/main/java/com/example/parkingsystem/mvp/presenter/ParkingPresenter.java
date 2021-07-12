@@ -26,4 +26,9 @@ public class ParkingPresenter implements ParkingContract.MainActivityPresenter {
     public void onBookParkingSpaces() {
         view.showBookParkingPickers();
     }
+
+    @Override
+    public void onRemovedOldReservation() {
+        view.showToasRemovedReservation(model.removedOldReservation());
+    }
 }

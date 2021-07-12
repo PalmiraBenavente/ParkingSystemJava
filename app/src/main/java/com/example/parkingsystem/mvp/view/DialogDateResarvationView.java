@@ -1,6 +1,5 @@
 package com.example.parkingsystem.mvp.view;
 
-import com.example.parkingsystem.utils.Constants;
 import com.example.parkingsystem.databinding.FragmentDialogDatePickerBinding;
 import com.example.parkingsystem.fragments.DateReservationDialogFragment;
 import com.example.parkingsystem.listener.ListenerDialogFragmentDate;
@@ -25,7 +24,7 @@ public class DialogDateResarvationView extends FragmentView implements DialogDat
     private Calendar getCalendarDateTime() {
         Calendar extractDateTime = new GregorianCalendar();
         extractDateTime.set(binding.datePickerDialogFragment.getYear(),
-                binding.datePickerDialogFragment.getMonth() - Constants.INT_ONE,
+                binding.datePickerDialogFragment.getMonth(),
                 binding.datePickerDialogFragment.getDayOfMonth(),
                 binding.timePickerDialogFragment.getHour(),
                 binding.timePickerDialogFragment.getMinute());

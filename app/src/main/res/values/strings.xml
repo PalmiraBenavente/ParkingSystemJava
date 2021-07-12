@@ -20,4 +20,6 @@
     <string name="toast_reservation_missing_code">enter the code, please</string>
     <string name="toast_reservation_overlap_missing_lot">enter the lot, please</string>
     <string name="toast_reservation_missing_date">enter the date, please</string>
+    <string name="button_main_remove_old_parking_spaces">remove old reservations</string>
+    <string name="toas_main_removed_old_reservations">%1$d reservations was removed</string>
 </resources>

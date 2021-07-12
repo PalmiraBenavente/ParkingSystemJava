@@ -31,4 +31,12 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/button_main_margin_horizontal_xbig"
         android:text="@string/button_main_book_parking_spaces" />
+
+    <Button
+        android:id="@+id/button_main_remove_old_parking_spaces"
+        style="@style/ButtonMainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/button_main_margin_horizontal_xbig"
+        android:text="@string/button_main_remove_old_parking_spaces" />
 </LinearLayout>

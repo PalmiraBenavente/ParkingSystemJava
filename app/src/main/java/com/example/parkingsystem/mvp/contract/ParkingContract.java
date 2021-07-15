@@ -9,7 +9,7 @@ public interface ParkingContract {
     }
 
     interface MainActivityView {
-        void showSelectionParkingSpaces(int parkingSpace);
+        void showSelectionParkingSpaces();
         void toastShowSpaces(int parkingSpace);
         void showBookParkingPickers();
         void showToasRemovedReservation(int cantOldResevations);

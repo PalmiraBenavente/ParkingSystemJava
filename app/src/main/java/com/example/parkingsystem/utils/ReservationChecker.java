@@ -57,7 +57,7 @@ public class ReservationChecker {
         if (reservationStartDate.before(reservationEndDateAux) && reservationEndDate.after(reservationEndDateAux)) {
             return true;
         } else {
-            return reservationEndDate.before(reservationEndDateAux) && reservationStartDate.after(reservationStartDateAux);
+            return reservationStartDate.after(reservationStartDateAux) && reservationEndDate.before(reservationEndDateAux);
         }
     }
 }

@@ -28,7 +28,7 @@ public class ReservationParkingPresenter implements ReservationParkingContract.R
     }
 
     public void onButtonPressedSaveReserver() {
-        model.setReservationLotCode(this.getIntegerUserData(view.getParkingLot()), this.getIntegerUserData(view.getParkingCode()));
+        model.setReservationLotCode(getIntegerUserData(view.getParkingLot()), getIntegerUserData(view.getParkingCode()));
         Reservation reservation = model.getReservation();
         EnumReservationVerify check = model.reservationVerify(reservation);
         switch (check) {

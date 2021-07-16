@@ -21,7 +21,7 @@ public class ParkingView extends ActivityView implements ParkingContract.MainAct
     }
 
     @Override
-    public void showSelectionParkingSpaces(int parkingSpace) {
+    public void showSelectionParkingSpaces() {
         FragmentManager fragmentManager = getFragmentManager();
         SpacesParkingDialogFragment spacesParkingDialogFragment = SpacesParkingDialogFragment.newInstance();
         spacesParkingDialogFragment.show(fragmentManager, "dialog_fragment");
